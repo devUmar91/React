@@ -1,10 +1,12 @@
 import React from 'react'
 
-function Education() {
+function Education({Education}) {
   return (
     <div>
         Education
-       
+        <li>{Education[0]}</li>
+        <li>{Education[1]}</li>
+        <li>{Education[2]}</li>
         </div>
   )
 }

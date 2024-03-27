@@ -12,6 +12,7 @@ import ComplexObject from "./Exercises/ComplexObject";
 // import { useContext } from "react";
 import Rerender from "./Exercises/rerender";
 import ResumeBuilder from "./Exercises/resumeBuilder/resume";
+import Child from "./Exercises/ChikdCompnentExample/child";
 
 function App() {
   // const { color, chngColor } = useContext(Context);
@@ -22,7 +23,8 @@ function App() {
      
 
      {/* <ToDoInput/> */}
-     <ResumeBuilder/>
+     {/* <ResumeBuilder/> */}
+     <Child/>
 
     
       </div>

@@ -1,8 +1,13 @@
 import React from 'react'
 
-function Skills() {
+function Skills({Skills}) {
   return (
-    <div>skills</div>
+    <div>
+         <h1>Skills</h1>
+        <li>{Skills[0]}</li>
+        <li>{Skills[1]}</li>
+        
+    </div>
   )
 }
 

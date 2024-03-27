@@ -1,34 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import Experience from "./experience";
 import Skills from "./skills";
 import Education from "./Education";
+
 
 function ResumeBuilder() {
   const [experiences,setExperiences]=useState([])
    const   resume = {
     experience : [ { year:2012, company:'xyz', role:'something' }],
-    education:[ ],
+    education:[ "BA Fail","Matric Pass","MS in Chemistry"],
     skills : [ 'react js', 'node js']
 
     }
-  //  console.log(resume.experience[0]);
+   console.log(resume.experience[0].year);
     
-   useEffect(() => {
-
-    return(
-     
-    resume.experience.map((item)=>{
-      // console.log(item);
-      setExperiences(item)
-      console.log(experiences);
-    
-    
-
-
-})
-    )
-
-   }, [])
+  
    
 
     
@@ -39,9 +25,9 @@ function ResumeBuilder() {
         <div>
           <h1 className="font-bold text-center text-pretty">My Resume</h1>
         </div>
-        <Skills   />
-        <Education />
-        <Experience  />
+        <Skills  Skills={resume.skills}/>
+        <Education Education={resume.education}/>
+        <Experience  Experience={resume.experience[0]}  />
         </div>
       </div>
     </>
