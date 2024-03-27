@@ -18,7 +18,7 @@ function ComplexObject() {
       gender: "other",
       firstName: "Emily",
     },
-    { gender: "male", firstName: "Charlie" },
+    { gender: "Male", firstName: "Charlie" },
     {
         gender: "male",
         firstName: "shurti",
@@ -28,18 +28,15 @@ function ComplexObject() {
       },
   ];
 
-  const males = people.filter((person) => person.gender === "male");
+  const males = people.filter((person) => person.gender.toLowerCase() === "male");
   //    console.log(males);
   return (
     <div className="flex justify-center align-center flex-col">
       <h1 style={{ textAlign: "Center" }} className="text-[50px] font-bold">
         Names of males
       </h1>
-      {males.map((male, index) => {
-        console.log(male, index);
-        console.log(people);
-        console.log(male.gender + " and " + male.firstName);
-
+      {
+      males.map((male) => {
         return <li className="text-center">{male.firstName}</li>;
       })}
     </div>
