@@ -34,12 +34,12 @@ export const Movies = () => {
         <h1 className="font-bold ml-[20px]">All Categories</h1>
         <div>
           {categories.map((item) => (
-            <button key={item} onClick={() => filterCategories(item)} className={`block ml-5 bg-slate-400 mb-2 px-8 text-center w-[120px] rounded-md ${selectedCategory === item ? 'bg-blue-500' : ''}`}>
+            <button key={item} onClick={() => filterCategories(item)} className={`block ml-5 bg-slate-400 mb-2 px-8 text-center w-[120px] rounded-md ${selectedCategory === item ?'bg-blue-600' : ''}`}>
               {item}
             </button>
           ))}
           {selectedCategory && (
-            <button onClick={resetFilter} className="block ml-5 bg-slate-400 mb-2 px-8 text-center w-[120px] rounded-md">
+            <button onClick={resetFilter} className="block ml-5 bg-slate-600 mb-2 px-8 text-center w-[120px] rounded-md">
               Reset Filter
             </button>
           )}
